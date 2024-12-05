@@ -67,6 +67,9 @@
           dayInNumber = "0" + dayInNumber;
         }
 
+        if(hours === 0) {
+          hours = 12;
+        }
         if (hours > 12) {
           hours -= 12;
         }
@@ -79,6 +82,7 @@
         if (seconds < 10) {
           seconds = "0" + seconds;
         }
+        
         timeInDetail.textContent=`${day}, ${dayInNumber} ${month} ${year}`
         clock.innerHTML = `<h1>${hours}:${minutes}:${seconds}</h1>`;
       });
