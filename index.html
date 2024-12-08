@@ -55,7 +55,7 @@
         let month = date.getMonth() + 1;
         month = getMonthName(month);
         let day = date.getDay() + 1;
-        let dayInNumber = date.getDate();
+        let curr_date = date.getDate();
         day = getDayName(day);
         let year = date.getFullYear();
     
@@ -63,8 +63,8 @@
         let minutes = date.getMinutes();
         let seconds = date.getSeconds();
 
-        if(dayInNumber < 10) {
-          dayInNumber = "0" + dayInNumber;
+        if(curr_date < 10) {
+          curr_date = "0" + curr_date;
         }
 
         if(hours === 0) {
@@ -83,7 +83,7 @@
           seconds = "0" + seconds;
         }
         
-        timeInDetail.textContent=`${day}, ${dayInNumber} ${month} ${year}`
+        timeInDetail.textContent=`${day}, ${curr_date} ${month} ${year}`
         clock.innerHTML = `<h1>${hours}:${minutes}:${seconds}</h1>`;
       });
 
